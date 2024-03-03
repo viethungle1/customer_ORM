@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CustomerManager</title>
+</head>
+<body>
+<a th:href="@{customer/create}">Create new customer</a>
+<table border="1px">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+    </tr>
+    <tr th:each="row:${customer}">
+        <td th:text="${row.getName()}"></td>
+        <td th:text="${row.getEmail()}"></td>
+        <td th:text="${row.getAddress()}"></td>
+        <td><a th:href="@{customer/delete/{id}(id=${row.getId()})}">Delete</a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
