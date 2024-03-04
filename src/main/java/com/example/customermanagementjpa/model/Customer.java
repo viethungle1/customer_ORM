@@ -1,4 +1,6 @@
-package com.example.customermanagement.model;
+package com.example.customermanagementjpa.model;
+
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 
